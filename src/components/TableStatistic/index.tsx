@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Dropdown from '../Dropdown';
 import TableStatisticItem from '../TableStatisticItem';
 import styles from './index.module.scss';
-import { DateRange, Range } from 'react-date-range';
+import { Range } from 'react-date-range';
 import DatePicker from '../DatePicker';
 
 const dateFilteringOptions = [

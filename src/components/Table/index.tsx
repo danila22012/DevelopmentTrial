@@ -145,7 +145,7 @@ export default function Table({ columns, data }: TableProps) {
         selectableRows
         subHeader
         subHeaderComponent={SubHeaderComponentMemo}
-        paginationPerPage={1}
+        paginationPerPage={5}
         paginationComponent={CustomPagination}
         customStyles={{
           headRow: {
