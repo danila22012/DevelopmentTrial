@@ -5,36 +5,38 @@ const columns = [
   {
     id: 1,
     name: 'ID',
-    selector: (row) => row.id,
-    cell: (row) => <span className='fw-bold'>{row.id}</span>,
+    selector: (row: any) => row.id,
+    cell: (row: any) => <span className='fw-bold'>{row.id}</span>,
     left: true,
   },
   {
     id: 2,
     name: 'DATE REMOVED',
-    selector: (row) => row.dateRemoved,
-    cell: (row) => <span className='text-secondary'>{row.dateRemoved}</span>,
+    selector: (row: any) => row.dateRemoved,
+    cell: (row: any) => (
+      <span className='text-secondary'>{row.dateRemoved}</span>
+    ),
     left: true,
   },
   {
     id: 3,
     name: 'LINK',
-    selector: (row) => row.link,
-    cell: (row) => <span className='text-primary'>{row.link}</span>,
+    selector: (row: any) => row.link,
+    cell: (row: any) => <span className='text-primary'>{row.link}</span>,
     left: true,
   },
   {
     id: 4,
     name: 'SOURCE',
-    selector: (row) => row.source,
-    cell: (row) => <span className='text-secondary'>{row.source}</span>,
+    selector: (row: any) => row.source,
+    cell: (row: any) => <span className='text-secondary'>{row.source}</span>,
     center: true,
   },
   {
     id: 5,
     name: 'Action',
-    selector: (row) => row.action,
-    cell: (row) =>
+    selector: (row: any) => row.action,
+    cell: (row: any) =>
       row.action === 'Delisted' ? (
         <span className={styles.badgeDanger}>{row.action}</span>
       ) : (

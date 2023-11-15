@@ -16,7 +16,7 @@ export default function DatePicker({
   onClose,
 }: DatePickerProps) {
   const backdrop = document.querySelector('#root');
-  const ref = useRef();
+  const ref: any = useRef();
 
   function closeDatePicker(e: any) {
     if (ref.current && !ref.current.contains(e.target)) {

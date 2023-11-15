@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import ArrowDownIcon from '../../assets/down.svg';
 import styles from './index.module.scss';
@@ -8,6 +8,8 @@ import generatePageNumbers, { downloadCSV } from '../../utils';
 import Dropdown from '../Dropdown';
 import { PaginationComponent } from 'react-data-table-component/dist/src/DataTable/types';
 import ArrowRightIcon from '../../assets/arrow-right-gray.svg';
+import { Range } from 'react-date-range';
+import DatePicker from '../DatePicker';
 
 const Filter = ({
   filterText,
@@ -103,10 +105,25 @@ interface TableProps {
 export default function Table({ columns, data }: TableProps) {
   const [filterText, setFilterText] = useState('');
   const [filteredDate, setFilteredDate] = useState('');
+  const [showDateRangePicker, setShowDateRangePicker] = useState(false);
+  const [dateRange, setDateRange] = useState<Range[]>([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: 'selection',
+    },
+  ]);
   const [filteredStatus, setFilteredStatus] = useState('');
   const filteredProducts = data.filter(
     (item) => item.id && item.id.toString().includes(filterText.toLowerCase())
   );
+
+  useEffect(() => {
+    if (filteredDate === 'Select Date') {
+      setShowDateRangePicker(true);
+      setFilteredDate('');
+    }
+  }, [filteredDate]);
 
   const SubHeaderComponentMemo = useMemo(() => {
     return (
@@ -136,6 +153,14 @@ export default function Table({ columns, data }: TableProps) {
 
   return (
     <div className={styles.container}>
+      {showDateRangePicker && (
+        <DatePicker
+          value={dateRange}
+          onChange={(value) => setDateRange(value)}
+          onClose={() => setShowDateRangePicker(false)}
+          isOpen={showDateRangePicker}
+        />
+      )}
       <DataTable
         columns={columns}
         data={filteredProducts}

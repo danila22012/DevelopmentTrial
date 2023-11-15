@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from './index.module.scss';
 import ArrowDownIcon from '../../assets/down.svg';
-import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
