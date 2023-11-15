@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.filter {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 16px;
+  & span {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--bs-gray-600);
+  }
+}
+.statsContainer {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}

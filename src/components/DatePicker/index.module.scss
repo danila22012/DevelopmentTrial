@@ -1,0 +1,49 @@
+.dateRange {
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+}
+.calendarWrapper {
+  box-shadow: 0px 8px 14px 0px rgba(15, 42, 81, 0.04);
+  padding: 10px;
+  border-radius: 10px;
+}
+.backdrop {
+  z-index: 9998;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+// .day {
+//   .dayNumber {
+//     span {
+//       color: var(--bs-black) !important;
+//     }
+//   }
+// }
+// .dayPassive {
+//   .dayNumber {
+//     span {
+//       color: var(--bs-gray-500) !important;
+//     }
+//   }
+// }
+// .dayPassive {
+//   .dayNumber {
+//     span {
+//       color: var(--bs-gray-500) !important;
+//     }
+//   }
+// }
+// .inRange {
+//   & + .dayNumber {
+//     span {
+//       color: #eef6ff !important;
+//     }
+//   }
+// }
+.weekDays {
+  margin: 16px 0;
+}

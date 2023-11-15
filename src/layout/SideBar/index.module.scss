@@ -1,0 +1,28 @@
+.container {
+  height: 100%;
+  max-width: 280px;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-right: 1px solid var(--bs-gray-300);
+}
+.sideBarItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  gap: 12px;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 106.667% */
+  color: var(--bs-gray-700);
+}
+.selected {
+  background: #eef6ff;
+  color: var(--bs-primary)
+}

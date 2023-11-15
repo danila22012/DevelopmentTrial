@@ -1,0 +1,39 @@
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--bs-gray-300);
+}
+.statusBar {
+  display: flex;
+  gap: 12px;
+  & > img {
+    cursor: pointer;
+    padding: 10px;
+  }
+}
+.notification {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  & > div {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 5px;
+    right: 0px;
+    background: var(--bs-danger);
+    color: var(--bs-white);
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.profileSelection {
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+}
